@@ -1,0 +1,656 @@
+@media only screen and (min-width:504px) and (max-width: 519px){
+    
+    #button-prev{
+        top: 50%;
+        left: -15%;
+        z-index:4;
+    }
+    #button-next{
+        top: 50%;
+        right: -15%;
+        z-index:4;
+    }
+    
+    .outer-frame{
+        width: 60%;
+    }
+
+    .current-card, .inner-card , .prev-card, .next-card{
+        width: 100%;
+    }
+
+    .prev-card{
+        left: 0%;
+        transform: translate(-25% , -50%);
+    }
+
+    .next-card{
+        right: 0%;
+        transform: translate(25% , -50%);
+    }
+
+    .card-image{
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-front-heading{
+        position: relative;
+        top: -10%;
+        font-size: 35px;
+    }
+
+    @keyframes current-card-left-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-25% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+        
+    }
+
+
+    @keyframes current-card-right-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            right: 0%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 476px ) and (max-width: 503px){
+
+    #button-prev{
+        top: 50%;
+        left: -15%;
+        z-index:4;
+    }
+    #button-next{
+        top: 50%;
+        right: -15%;
+        z-index:4;
+    }
+    
+    .outer-frame{
+        width: 60%;
+    }
+
+    .current-card, .inner-card , .prev-card, .next-card{
+        width: 100%;
+    }
+
+    .prev-card{
+        left: 0%;
+        transform: translate(-25% , -50%);
+    }
+
+    .next-card{
+        right: 0%;
+        transform: translate(25% , -50%);
+    }
+
+    .card-image{
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-front-heading{
+        position: relative;
+        top: -10%;
+        font-size: 35px;
+    }
+
+    .card-back .card-para{
+        font-size: 23px;
+    }
+
+    .footer .footer-title{
+        font-size: 30px;
+    }
+
+    @keyframes current-card-left-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-25% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+        
+    }
+
+
+    @keyframes current-card-right-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            right: 0%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+    }
+}
+
+@media only screen and (min-width: 400px ) and (max-width: 474px){
+
+    #button-prev{
+        top: 50%;
+        left: -15%;
+        z-index:4;
+    }
+    #button-next{
+        top: 50%;
+        right: -15%;
+        z-index:4;
+    }
+    
+    .outer-frame{
+        width: 60%;
+    }
+
+    .current-card, .inner-card , .prev-card, .next-card{
+        width: 100%;
+    }
+
+    .prev-card{
+        left: 0%;
+        transform: translate(-25% , -50%);
+    }
+
+    .next-card{
+        right: 0%;
+        transform: translate(25% , -50%);
+    }
+
+    .card-image{
+        width: 220px;
+        height: 220px;
+    }
+
+    .card-front-heading{
+        position: relative;
+        top: -10%;
+        font-size: 35px;
+    }
+
+    .card-back .card-para{
+        font-size: 18px;
+    }
+
+    .footer .footer-title{
+        font-size: 30px;
+    }
+
+    @keyframes current-card-left-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-25% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+        
+    }
+
+
+    @keyframes current-card-right-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            right: 0%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+    }
+}
+
+@media only screen and (min-width: 360px ) and (max-width: 399px){
+
+    .outer-frame{
+        width: 350px;
+    }
+    #button-prev{
+        top: 50%;
+        left: 5%;
+        z-index:4;
+    }
+    #button-next{
+        top: 50%;
+        right: 5%;
+        z-index:4;
+    }
+    
+    .current-card, .inner-card , .prev-card, .next-card{
+        width: 100%;
+    }
+
+    .prev-card{
+        left: 0%;
+        transform: translate(0% , -50%);
+    }
+
+    .next-card{
+        right: 0%;
+        transform: translate(0% , -50%);
+    }
+
+    .card-image{
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-front-heading{
+        position: relative;
+        top: -10%;
+        font-size: 35px;
+    }
+
+    .card-back .card-para{
+        font-size: 18px;
+    }
+
+    .footer .footer-title{
+        font-size: 30px;
+    }
+
+    @keyframes current-card-left-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-25% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+        
+    }
+
+
+    @keyframes current-card-right-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            right: 0%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+    }
+}
+@media only screen and (min-width: 341px ) and (max-width: 359px){
+
+    .outer-frame{
+        width: 350px;
+    }
+    #button-prev{
+        top: 90%;
+        left: 10%;
+        z-index:4;
+    }
+    #button-next{
+        top: 90%;
+        right: 10%;
+        z-index:4;
+    }
+    
+    .current-card, .inner-card , .prev-card, .next-card{
+        width: 100%;
+    }
+
+    .prev-card{
+        left: 0%;
+        transform: translate(0% , -50%);
+    }
+
+    .next-card{
+        right: 0%;
+        transform: translate(0% , -50%);
+    }
+
+    .card-image{
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-front-heading{
+        position: relative;
+        top: -10%;
+        font-size: 35px;
+    }
+
+    .card-back .card-para{
+        font-size: 18px;
+    }
+
+    .footer .footer-title{
+        font-size: 30px;
+    }
+
+    @keyframes current-card-left-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-25% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+        
+    }
+
+
+    @keyframes current-card-right-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            right: 0%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+    }
+}
+@media only screen and (min-width: 320px ) and (max-width: 340px){
+
+    nav .my-project{
+        font-size:40px
+    }
+    .outer-frame{
+        width: 100%;
+    }
+    #button-prev{
+        top: 90%;
+        left: 10%;
+        z-index:4;
+    }
+    #button-next{
+        top: 90%;
+        right: 10%;
+        z-index:4;
+    }
+    
+    .current-card, .inner-card , .prev-card, .next-card{
+        width: 100%;
+    }
+
+    .prev-card{
+        left: 0%;
+        transform: translate(0% , -50%);
+    }
+
+    .next-card{
+        right: 0%;
+        transform: translate(0% , -50%);
+    }
+
+    .card-image{
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-front-heading{
+        position: relative;
+        top: -10%;
+        font-size: 35px;
+    }
+
+    .card-back .card-para{
+        font-size: 18px;
+    }
+
+    .footer .footer-title{
+        font-size: 30px;
+    }
+
+    @keyframes current-card-left-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-25% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+        
+    }
+
+
+    @keyframes current-card-right-transition {
+        0% {
+            opacity: 1;
+            top: 50%;
+            right: 0%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        
+        50% {
+            opacity: 0.5;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        75% {
+            opacity: 0.2;
+            top: 50%;
+            right: -25%;
+            transform: translate(0% , -50%);
+            z-index: 4;
+        }
+        100% {
+            opacity: 0.2;
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Dancing+Script:wght@500&family=Lobster&family=Lobster+Two&family=Roboto:wght@300&family=Sacramento&family=Smokum&display=swap');
+
+*{
+    padding: 0;margin: 0;
+}
+
+/* :root{
+    --heightNav: 130px;
+} */
+body{
+    background-color: black;
+}
+
+
+nav{
+    box-sizing: border-box;
+    padding: 5px;
+    display:flex;
+    width:100%;
+    /* height: var(--heightNav); */
+    justify-content:center;
+    align-items: center;
+    background-color: lime;
+}
+
+nav .my-project{
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    color: black;
+    font-weight: bolder;
+}
+main{
+    position: relative;
+    height: 35rem;
+}
+.outer-frame {
+    position: absolute;
+    display:flex;
+    width: 80%;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-frame{
+    position:relative;
+    width:100%;
+    height:100%;
+    left:50%;
+    transform:translate(-50%)
+}
+
+#button-prev {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    font-size: 50px;
+    transform: translate(-50% ,-50%);
+    color: black;
+    border-radius: 50%;
+    z-index:3;
+}
+
+#button-next{
+    position: absolute;
+    font-size: 50px;
+    right: 25%;
+    top: 50%;
+    transform: translate(50% ,-50%);
+    color: black;
+    border-radius: 50%;
+    z-index:3
+}
+.current-card{
+    position:absolute;
+    width: 500px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , -50%);
+    z-index: 3;   
+    
+}
+.inner-card{
+    position: relative;
+    width: 500px;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 0 50px #13f1f1;
+    border-radius: 2rem;
+    animation: glowing 2s ease-in-out infinite;
+}
+.card-image{
+    height: 300px;
+    width: 400px;
+    border-radius: 2rem;
+    box-shadow: 0 0 13 yellow;
+}
+
+.card-front{
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    width: 100%;
+    height: 100%;    
+    background: radial-gradient(at top right, #ff8a00, #da1b60);
+    text-align:center;
+    border-radius: 2rem;    
+}
+
+.card-front .card-front-heading{
+    font-family: 'Lobster', cursive;
+}
+
+.fa-brands , .fa-github{
+    color:black;
+}
+
+.card-back{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30%;
+    top: 70%;
+    background: radial-gradient(at top right, #00bfff, #ff1493);
+    opacity: 0;
+    border-radius: 0rem 0rem 2rem 2rem;
+}
+
+.card-para{
+    font-size: 25px;
+}
+
+.button-holder{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-back-buttons{
+    font-size:23px;
+    padding: 5px;
+    border-radius:4px;
+}
+
+.card-front-load{
+    animation: card-front-load-animation 0.2s linear forwards; 
+    cursor:pointer;   
+}
+
+.card-back-load{
+    animation: card-back-load-animation 0.2s linear  0.2s forwards;    
+}
+
+.card-front-unload{
+    animation: card-front-unload-animation 0.2s linear forwards;
+}
+
+.prev-card{
+    position:absolute;
+    width: 500px;
+    height: 100%;
+    top: 50%;
+    left: 0%;
+    transform: translate(50% , -50%);
+    z-index:2;
+    opacity: 0.2;
+}
+
+.next-card{
+    position:absolute;
+    width: 500px;
+    height: 100%;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50% , -50%);
+    z-index:2;
+    opacity: 0.2;
+}
+
+.hidden-cards{
+    visibility: hidden;
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.footer-title{    
+    font-size:50px;
+    color: white;
+}
+
+.footer-anchor{
+    text-decoration: none;
+}
+
+/* ----------------------- Hovering and States -------------------------*/
+    #button-prev , #button-next,.card-back-buttons,.footer-anchor:hover{
+        cursor: pointer;
+    }
+
+/* -------------------- Animation Section ------------------------------ */
+
+    .slide-current-card-left-animation{
+        animation: current-card-left-transition 2s linear ;
+    }
+    .slide-current-card-right-animation{
+        animation: current-card-right-transition 2s linear;
+    }
+
+    .element {
+        background: radial-gradient(at top right, #ff8a00, #da1b60);
+        
+      }
+      
+
+
+/* -------------------- keyframes Section ------------------------------- */
+
+@keyframes card-front-load-animation{
+    0%{
+        translate: 0 0;      
+    }
+
+    50%{
+        translate: 0 -12.5%;
+    }
+    100%{
+        translate: 0 -25%;
+    }
+
+}
+
+@keyframes card-front-unload-animation{
+    0%{         
+        translate: 0 -25%;     
+    }
+
+    50%{
+        translate: 0 -12.5%;
+    }
+    100%{
+        translate: 0 0;
+    }
+
+}
+
+@keyframes card-back-load-animation{
+    0%{
+        opacity: 0;     
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes current-card-left-transition{
+    0%{
+        opacity:1;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50% , -50%);
+        z-index: 4;
+    }
+
+    50%{
+        opacity: 0.5;
+        top:50%;
+        left:25%;
+        transform:translate(-50% , -50%);
+        z-index:4;
+    }
+
+    75%{
+        opacity: 0.2;
+        top:50%;
+        left:0%;
+        transform:translate(50% , -50%);
+        z-index: 4;
+    }
+
+    100%{
+        opacity: 0.2;
+        z-index: 2;
+    }
+}
+
+@keyframes current-card-right-transition{
+    0%{
+        opacity:1;
+        top: 50%;
+        right: 21%;
+        transform:translate(-25% , -50%);
+        z-index: 4;
+    }
+
+    50%{
+        opacity: 0.5;
+        top:50%;
+        right:0%;
+        transform:translate(-25% , -50%);
+        z-index:4;
+    }
+
+    75%{
+        opacity: 0.2;
+        top:50%;
+        right:0%;
+        transform:translate(-50% , -50%);
+        z-index: 4;
+    }
+
+    100%{
+        opacity: 0.2;
+        z-index: 2;
+    }
+}
+
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #ff8a00, 0 0 10px #ff8a00, 0 0 20px #da1b60, 0 0 30px #da1b60;
+    }
+    50% {
+      box-shadow: 0 0 10px #ff8a00, 0 0 20px #ff8a00, 0 0 40px #da1b60, 0 0 60px #da1b60;
+    }
+    100% {
+      box-shadow: 0 0 5px #ff8a00, 0 0 10px #ff8a00, 0 0 20px #da1b60, 0 0 30px #da1b60;
+    }
+  }
+
